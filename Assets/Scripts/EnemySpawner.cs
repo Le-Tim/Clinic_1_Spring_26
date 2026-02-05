@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(interval);
         Vector3 spawnPos = new Vector3(
-            Random.Range(-5f, 5f), 0f, Random.Range(-6f, 6f)
+            Random.Range(-5f, 5f), 0.2f, Random.Range(-6f, 6f)
         );
         Instantiate(enemy, spawnPos, Quaternion.identity);
         StartCoroutine(SpawnEnemy(interval, enemy));
